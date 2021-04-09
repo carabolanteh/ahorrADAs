@@ -1,0 +1,22 @@
+
+/* Fuente utilizada en el proyecto */
+
+@font-face {
+    font-family:cosmith-sans;
+    src: url(../Assets/fonts/cosmith.sans.ttf);
+}
+
+/*Paleta de colores*/
+
+:root{
+--black:#151515;
+--silver:#7e8287;
+--gray:#9da39a;
+--oldrose:#ffcef6;
+--raspberry:#ec006a;
+}
+
+body{
+    background-color: var(--silver);
+    font-family: cosmith-sans;
+}
