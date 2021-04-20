@@ -10,7 +10,8 @@ const addOperationBtn = document.getElementById('addOperationBtn')
 newOpBtn.addEventListener('click', ()=>{
     newOperation.style.display = 'flex'
     newOperation.style.position = 'absolute'
-    newOperation.style.top = '0px'
+    newOperation.style.top = '2rem'
+    newOperation.style.zIndex = '1000'
 })
 cancelOperationBtn.addEventListener('click', ()=>{
     newOperation.style.display = 'none';
