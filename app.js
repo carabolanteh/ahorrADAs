@@ -42,13 +42,16 @@ const pintarOperaciones = (operaciones) => {
         }
         const caja =
         `<div id='${operaciones[index].id}' class="columns">
-            <span class="column">${operaciones[index].descripcion}</span>
-            <span class="column">${operaciones[index].categoria}</span>
-            <span class="column">${operaciones[index].fecha}</span>
-            <span class="column" style= "color: ${colorMonto}; font-weight: bold;">${operaciones[index].monto}</span>
-            <span class="column">
-            <a>Editar</a>
-            <a>Eliminar</a>
+            <span class="column is-3">${operaciones[index].descripcion}</span>
+            <span class="column is-2">${operaciones[index].categoria}</span>
+            <span class="column is-3">${operaciones[index].fecha}</span>
+            <span class="column is-2" style= "color: ${colorMonto}; font-weight: bold;">${operaciones[index].monto}</span>
+            <span class="column is-2">
+            <div class="has-text-right is-flex is-flex-direction-column">
+            <a id="editLink" class="is-size-7">Editar</a>
+            <a id="deleteLink" class="is-size-7">Eliminar</a>
+            </div>
+            
             </span>
         </div>`
         pintar.insertAdjacentHTML('beforeend', caja);
@@ -70,5 +73,50 @@ addOperationBtn.addEventListener('click', ()=>{
     pintarOperaciones(operacionesLocalStorage)
 })
 
-operaciones =  JSON.parse(localStorage.getItem('operaciones'))
+operaciones =  JSON.parse(localStorage.getItem('operaciones') || [])
 pintarOperaciones(operaciones)
+
+
+
+// Editar - Eliminar
+
+
+
+
+const editOperation = document.getElementById('editOperation');
+const editLink = document.getElementById('editLink');
+const deleteLink = document.getElementById('deleteLink');
+const cancelEditBtn = document.getElementById('cancelEditBtn')
+const editOperationBtn = document.getElementById('editOperationBtn');
+
+const edit = (id) =>{
+    const operacion = operaciones.find((operacion) => operacion.id === id)
+    console.log(operacion);
+}
+
+
+editLink.addEventListener("click", () =>{
+    edit(id)
+}
+)
+
+editLink.addEventListener('click', ()=>{
+    editOperation.style.display = 'flex'
+    editOperation.style.position = 'absolute'
+    editOperation.style.top = '2rem'
+    editOperation.style.zIndex = '1000'
+})
+cancelEditBtn.addEventListener('click', ()=>{
+    editOperation.style.display = 'none';
+})
+
+
+//EDITAR
+
+
+
+//Borrar
+
+deleteLink.addEventListener("click", ()=>{
+
+})

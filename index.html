@@ -115,11 +115,11 @@
                   <button class="button is-rounded" id="newOpBtn">+Nueva Operación</button>
                 </div>
                 <div class="columns mt-3 has-background-danger-dark has-text-black-bis">
-                  <span class="column">Descripción</span>
-                  <span class="column">Categoría</span>
-                  <span class="column">Fecha</span>
-                  <span class="column">Monto</span>
-                  <span class="column">Acciones</span>
+                  <span class="column is-3">Descripción</span>
+                  <span class="column is-2">Categoría</span>
+                  <span class="column is-3">Fecha</span>
+                  <span class="column is-2">Monto</span>
+                  <span class="column is-2">Acciones</span>
                 </div>
                 <div id="pintar">
                     
@@ -175,6 +175,53 @@
       
               </div>
           </section>
+          <!-- EDITAR OPERACIÓN      -->
+          <section id="editOperation" style="width: 100%; display: none; justify-content: center; background-color: white;">
+            <div class="container has-background-white mt-6 p-2" style="width: 60%;">
+                <p class="title has-text-black mt-2"> Editar operación.</p>
+                <div class="field">
+                    <label class="label">Descripcion</label>
+                    <div class="control">
+                    <input id="descripcionEdit" class="input" type="text" placeholder="">
+                    </div>
+                </div>
+                <label class="label">Monto</label>
+                <input id="montoEdit" type="number" style="width: 100%; height: 2rem;" >
+                <br>
+                <br>
+                <label class="label">Tipo</label>
+                <div class="select is-black" style="width: 100%; height: 2rem;">
+                    <select id="tipoEdit" style="width: 100%; height: 2.3rem;" >
+                    <option>Gasto</option>
+                    <option>Ganancia</option>
+                    </select>
+                </div>
+                <br>
+                <br>
+                <label class="label" >Categorias</label>
+                <div class="select is-black" style="width: 100%; height: 3rem;">
+                    <select id="categoriaEdit" style="width: 100%; height: 3rem;">
+                    <option>Todas</option>
+                    <option>Comidas</option>
+                    <option>Servicios</option>
+                    <option>Salidas</option>
+                    <option>Transporte</option>
+                    <option>Educación</option>
+                    <option>Trabajo</option>
+                    </select>
+                </div>
+                <br>
+                <br>
+                <label class="label"> Fecha</label>
+                <input id="fechaEdit" type="date" style="width: 100%; height: 3rem;">
+                <br>
+                <br>
+                <br>
+                <button class="button  is-rounded " id="cancelEditBtn">Cancelar</button>
+                <button class="button is-success is-rounded " id="editOperationBtn">Editar</button>
+    
+            </div>
+        </section>
 
         <!-- SECCION CATEGORIAS -->
         <section id="categorias" class="container has-background-white mt-6 p-2" style="width: 70%;height: 60vh; display: none;">
