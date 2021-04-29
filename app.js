@@ -1,1 +1,1 @@
- const instance = M.Tabs.init(el, options);
+//  const instance = M.Tabs.init(el, options);
