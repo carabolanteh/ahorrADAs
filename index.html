@@ -24,7 +24,7 @@
     <!-- MENU DE NAVEGACIÓN DE LA PAGINA -->
     <nav class="navbar is-black p-2" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <article class="navbar-item" href="https://bulma.io">
+          <article class="navbar-item" href="https://bulma.io" onclick="controlVisibility('home')">
             <i class="fas fa-piggy-bank"> </i>
             <span class="principal-title ml-2">AHORRADAS</span>
           </article>
@@ -38,9 +38,9 @@
       
         <div id="navbarBasicExample" class="navbar-menu">
           <article class="navbar-end">
-            <div class="navbar-item botoncito" id="balanceBtn"> <i class="fas fa-chart-line mr-2"> </i>Balance</div>
-            <div class="navbar-item botoncito" id="categoriasBtn"> <i class="fas fa-chart-pie mr-2"></i>Categorias</div>
-            <div class="navbar-item botoncito" id="reportesBtn"><i class="fas fa-file-invoice-dollar mr-2"></i>Reportes</div>
+            <div class="navbar-item botoncito" id="balanceBtn"> <i class="fas fa-chart-line mr-2" onclick="controlVisibility('home')"> </i>Balance</div>
+            <div class="navbar-item botoncito" id="categoriasBtn" onclick="controlVisibility('categories')"> <i class="fas fa-chart-pie mr-2"></i>Categorias</div>
+            <div class="navbar-item botoncito" id="reportesBtn" onclick="controlVisibility('reports')"><i class="fas fa-file-invoice-dollar mr-2"></i>Reportes</div>
         </article>
       </div>
       </nav>
@@ -113,7 +113,7 @@
                   <p class="title">
                     Operaciones
                   </p>
-                  <button class="button is-rounded" id="newOpBtn">+Nueva Operación</button>
+                  <button class="button is-rounded" onclick="controlVisibility('new-operation')">+Nueva Operación</button>
                 </div>
                 <div class="columns mt-3 has-background-danger-dark has-text-black-bis">
                   <span class="column is-3">Descripción</span>
@@ -131,7 +131,7 @@
           </div>
         </section>
         <!-- NUEVA OPERACION      -->
-          <section id="new-operation" style="width: 100%; display: none; justify-content: center; background-color: white;">
+          <section id="new-operation" class="is-hidden is-visible">
               <div class="container has-background-white mt-6 p-2" style="width: 60%;">
                   <p class="title has-text-black mt-2"> Nueva operación.</p>
                   <div class="field">
@@ -181,7 +181,7 @@
               </div>
           </section>
           <!-- EDITAR OPERACIÓN      -->
-          <section id="edit-operation" style="width: 100%; display: none; justify-content: center; background-color: white;">
+          <section id="edit-operation" class="is-hidden is-visible">
             <div class="container has-background-white mt-6 p-2" style="width: 60%;">
                 <p class="title has-text-black mt-2"> Editar operación.</p>
                 <div class="field">
@@ -254,7 +254,7 @@
         </section>
 
         <!-- SECCION REPORTES -->
-        <section id="reports" class="container has-background-white mt-6 p-2" style="width: 70%; display: none;">
+        <section id="reports" class="container has-background-white mt-6 p-2" class="is-hidden is-visible">
             <p class="title"> Reportes</p>
             <img src="./Assets/Images/undraw_Investing_re_bov7.svg" style="height: 40vh;" class="center" alt="">
             <p> Operaciones insuficientes</p>

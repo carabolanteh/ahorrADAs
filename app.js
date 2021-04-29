@@ -8,6 +8,16 @@ const cancelOperationBtn = document.getElementById('cancelOperationBtn')
 const sections = document.getElementsByTagName("section");
 
 
+const controlVisibility = (page) => {
+  sectionsList.forEach((section) => {
+    if (section.id === page) {
+      section.classList.remove("is-hidden");
+    } else {
+      section.classList.add("is-hidden");
+    }
+  });
+  console.log(sectionsList);
+};
 
 const formNewOperation = document.querySelectorAll(
     "#new-operation input[data-owner], #new-operation select[data-owner]"
